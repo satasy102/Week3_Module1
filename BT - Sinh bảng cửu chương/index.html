@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh bảng cửu chương</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    let o = "<table border='1' cellpadding=5 cellspacing=3>";
+    let i = j = 1;
+    for (i = 1; i <= 9; i++) {
+        o = o + "<tr>";
+        for (j = 2; j <= 9; j++) {
+
+            let s = j * i;
+            o = o + `<td> ${j}x${i}=${s} </td>`;
+
+        } o = o + '</tr>';
+
+    }
+    o = o + '</table>';
+    document.write(o);
+</script>
+
+</html>
