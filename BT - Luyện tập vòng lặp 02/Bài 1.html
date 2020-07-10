@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <script>
+        let soluong = +prompt('Nhập số lượng cần in ra: ');
+        let n1 = 0;
+        let n2 = 1;
+        document.write(n1 + " " + n2 + " ");
+        let n3 = 0;
+        let i = 0;
+        let sodu = 0;
+        for (i = 2; i < soluong; i++) {
+            n3 = n1 + n2;
+            document.write(` ${n3}`);
+            n1 = n2;
+            n2 = n3;
+        }
+    </script>
+</body>
+
+</html>

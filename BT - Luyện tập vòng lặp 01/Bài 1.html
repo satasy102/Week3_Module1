@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1</title>
+</head>
+
+<body>
+    <span id="dem"></span>
+    <script>
+        // function dem() {
+        //     for (i = 1; i < 100; i++) {
+        //         document.getElementById('dem').innerHTML = i;
+        //         setTimeout(dem(), 1000);
+        //         if (i == 99) {
+        //             alert('Hoàn thành');
+        //         }
+        //     }
+
+        // }
+
+        function write(i) {
+            if (i < 100) {
+                document.getElementById('dem').innerHTML = i;
+                i++
+                setTimeout(function () { write(i) }, 100);
+            } else alert('Hoàn thành');
+        }
+        write(1)
+
+
+    </script>
+</body>
+
+</html>

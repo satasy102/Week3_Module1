@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        let n1 = 0;
+        let n2 = 1;
+        let n3 = 0;
+        let i = 0;
+        let tong = n1 + n2;
+
+        for (i = 2; i < 20; i++) {
+            n3 = n1 + n2;
+            document.write(` ${n3}`);
+            tong = tong + n3;
+            n1 = n2;
+            n2 = n3;
+        }
+        document.write(" <br> Tổng 20 số đầu tiên trong dãy Fibonacci là: " + tong);
+    </script>
+</body>
+
+</html>

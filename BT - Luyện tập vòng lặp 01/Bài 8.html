@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+</head>
+
+<body>
+    <script>
+
+        let minA = +prompt('Nhập khoảng dự doán. Số nhỏ nhất: ');
+        let maxA = +prompt('Nhập khoảng dự doán. Số lớn nhất: ');
+        let random = 0;
+        random = parseInt(Math.random() * (maxA - minA) + minA);
+        function doan(minA, maxA, random) {
+            let userdoan = +prompt('Mời bạn đoán: ');
+            if (random == userdoan) {
+                alert('Chúc mừng bạn đã đoán trúng');
+            } else if (random > userdoan) {
+                alert('Số bạn đoán bé hơn máy tính chọn');
+                doan(minA, maxA, random);
+            } else if (random < userdoan) {
+                alert('Số bạn đoán lớn hơn máy tính chọn');
+                doan(minA, maxA, random);
+            }
+        }
+        doan(minA, maxA, random)
+
+    </script>
+</body>
+
+</html>

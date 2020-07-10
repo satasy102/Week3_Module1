@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        let tienvaybandau = +prompt('Số tiền ban đầu vay: ');
+        let thang = +prompt('Số tháng vay: ');
+        let tienvay = tienvaybandau;
+        let tienlai = 0;
+        let laisuat = +prompt('Lãi suất hàng tháng %: ');
+        for (let i = 1; i <= thang; i++) {
+            tienlai = (tienvay * thang * laisuat) / 100;
+            tienvay += tienlai;
+        }
+
+        document.write(`Sau ${thang} tháng, số tiền lãi của ngân hàng là: ${tienlai} đồng, tổng tiền nợ của bạn là ${tienvay}`);
+
+
+    </script>
+</body>
+
+</html>
