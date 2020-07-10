@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tìm giá trị trong mảng</title>
+</head>
+
+<body>
+    <script>
+        let n = prompt("Nhập số: ");
+        let mang = [-3, 5, 1, 3, 2, 10];
+        let y;
+        let x;
+        for (let i = 0; i < mang.length; i++) {
+            if (n == mang[i]) {
+                x = i;
+                y = mang[i];
+
+            }
+        }
+        if (n == y) {
+            alert("Số " + n + " bạn nhập được tìm thấy tại vị trí " + x);
+        } else alert("Số " + n + " bạn nhập không được tìm thấy trong mảng ");
+    </script>
+</body>
+
+</html>
