@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 7</title>
+</head>
+
+<body>
+    <script>
+        function swap(a, b) {
+            let c = a;
+            a = b;
+            b = c;
+            document.write('Số thứ 1 lúc này là: ' + a + '<br/>');
+            document.write('Số thứ 2 lúc này là: ' + b);
+
+        }
+        let x = +prompt('Nhập số thứ 1: ');
+        let y = +prompt('Nhập số thứ 2: ');
+        swap(x, y);
+
+    </script>
+</body>
+
+</html>

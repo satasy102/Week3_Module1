@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 5</title>
+</head>
+
+<body>
+    <script>
+        function min(a, b, c) {
+            let min = a;
+            if (min > b) {
+                min = b;
+            } else if (min > c) {
+                min = c;
+            }
+            return min;
+        }
+        let x = +prompt('Nhập số thứ 1: ');
+        let y = +prompt('Nhập số thứ 2: ');
+        let z = +prompt('Nhập số thứ 3: ');
+        let result = min(x, y, z);
+        alert(result);
+    </script>
+</body>
+
+</html>
