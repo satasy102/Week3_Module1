@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tạo bàn cờ caro đơn giản</title>
+</head>
+
+<body>
+    <h3>Caro Game Simple</h3>
+    <p id="caro"></p>
+    <input type="button" value="Change Value" onclick="danhdau()">
+</body>
+<script>
+    let banco = [];
+    let oco = "";
+    for (let i = 0; i < 5; i++) {
+        banco[i] = [0, 0, 0, 0, 0];
+    }
+    for (let i = 0; i < 5; i++) {
+        oco += "<br/> <br/>";
+        for (let j = 0; j < 5; j++) {
+            oco += banco[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+        }
+    }
+    document.getElementById('caro').innerHTML = oco;
+    function danhdau() {
+        let toadoX = parseInt(prompt("X: "));
+        let toadoY = parseInt(prompt("Y: "));
+        oco = "";
+        banco[toadoX][toadoY] = "x";
+        for (let i = 0; i < 5; i++) {
+            oco += "<br/><br/>";
+            for (let j = 0; j < 5; j++) {
+                oco += banco[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+        }
+        document.getElementById('caro').innerHTML = oco;
+    }
+
+
+</script>
+
+</html>

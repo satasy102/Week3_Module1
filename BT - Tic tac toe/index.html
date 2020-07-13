@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic tac toe</title>
+</head>
+
+
+
+<body>
+
+    <h3>Caro Game Simple</h3>
+    <p id="caro"></p>
+    <input type="button" value="X" onclick="danhdauX()">
+    <input type="button" value="O" onclick="danhdauO()">
+
+</body>
+
+
+<script>
+    let banco = [];
+    let oco = "";
+    for (let i = 0; i < 3; i++) {
+        banco[i] = ['.', '.', '.'];
+    }
+    for (let i = 0; i < 3; i++) {
+        oco += "<br/> <br/>";
+        for (let j = 0; j < 3; j++) {
+            oco += banco[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+        }
+    }
+    document.getElementById('caro').innerHTML = oco;
+
+    function danhdauX() {
+        let toadoX = parseInt(prompt("X: "));
+        let toadoY = parseInt(prompt("Y: "));
+        oco = "";
+        banco[toadoX][toadoY] = "x";
+        for (let i = 0; i < 3; i++) {
+            oco += "<br/><br/>";
+            for (let j = 0; j < 3; j++) {
+                oco += banco[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+        }
+        document.getElementById('caro').innerHTML = oco;
+        if (((banco[0][0] == 'x') && (banco[0][1] == 'x') && (banco[0][2] === 'x')) || ((banco[1][0] == 'x') && (banco[1][1] == 'x') && (banco[1][2] === 'x')) || ((banco[2][0] == 'x') && (banco[2][1] == 'x') && (banco[2][2] === 'x')) ||
+            ((banco[0][0] == 'x') && (banco[1][0] == 'x') && (banco[2][0] === 'x')) || ((banco[0][1] == 'x') && (banco[1][1] == 'x') && (banco[2][1] === 'x')) || ((banco[0][2] == 'x') && (banco[1][2] == 'x') && (banco[2][2] === 'x')) ||
+            ((banco[0][0] == 'x') && (banco[1][1] == 'x') && (banco[2][2] === 'x')) || ((banco[0][2] == 'x') && (banco[1][1] == 'x') && (banco[2][0] === 'x'))) {
+            setTimeout(function () { alert('X đã chiến thắng') }, 300);
+        }
+
+    }
+
+    function danhdauO() {
+        let toadoX = parseInt(prompt("X: "));
+        let toadoY = parseInt(prompt("Y: "));
+        oco = "";
+        banco[toadoX][toadoY] = "o";
+        for (let i = 0; i < 3; i++) {
+            oco += "<br/><br/>";
+            for (let j = 0; j < 3; j++) {
+                oco += banco[i][j] + "&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp";
+            }
+        }
+        document.getElementById('caro').innerHTML = oco;
+
+        if (((banco[0][0] == 'o') && (banco[0][1] == 'o') && (banco[0][2] === 'o')) || ((banco[1][0] == 'o') && (banco[1][1] == 'o') && (banco[1][2] === 'o')) || ((banco[2][0] == 'o') && (banco[2][1] == 'o') && (banco[2][2] === 'o')) ||
+            ((banco[0][0] == 'o') && (banco[1][0] == 'o') && (banco[2][0] === 'o')) || ((banco[0][1] == 'o') && (banco[1][1] == 'o') && (banco[2][1] === 'o')) || ((banco[0][2] == 'o') && (banco[1][2] == 'o') && (banco[2][2] === 'o')) ||
+            ((banco[0][0] == 'o') && (banco[1][1] == 'o') && (banco[2][2] === 'o')) || ((banco[0][2] == 'o') && (banco[1][1] == 'o') && (banco[2][0] === 'o'))) {
+            setTimeout(function () { alert('O đã chiến thắng') }, 300);
+        }
+    }
+
+
+</script>
+
+</html>

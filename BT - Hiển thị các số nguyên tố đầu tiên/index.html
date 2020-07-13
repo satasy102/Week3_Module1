@@ -13,12 +13,11 @@
 <script>
     let num = parseInt(prompt('Nhập 1 số tự nhiên: '));
     let sl = parseInt(prompt('Nhập số lượng cần in ra: '));
-    let i = 2;
     let s = 0;
     let count = 0;
     for (let j = 2; j <= num; j++) {
-        for (i = 2; i < j; i++) {
-            sodu = j % i;
+        for (let i = 2; i < j; i++) {
+            let sodu = j % i;
             if (sodu == 0) {
                 s = 1;
             }

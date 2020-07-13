@@ -9,8 +9,8 @@
 
 <body>
     <input type="text" id="giatri"></input>
-    <input type="button" id="nutAdd" value="Add" onclick="themvaomang();"></input>
-    <input type="button" id="nutDisplay" value="Display" onclick="hienthimang();"></input>
+    <input type="button" id="nutAdd" value="Add" onclick="themvaomang()"></input>
+    <input type="button" id="nutDisplay" value="Display" onclick="hienthimang()"></input>
     <div id="result"></div>
 </body>
 <script>
@@ -19,7 +19,6 @@
 
     function themvaomang() {
         mang[x] = document.getElementById('giatri').value;
-        x++;
         document.getElementById('giatri').value = "";
     }
     function hienthimang() {

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 3</title>
+</head>
+
+<body>
+    <script>
+        let demo = prompt('Nhập 1 chuỗi ký tự có phân biệt HOA thường: ');
+        let UPPER = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        let LOWER = 'abcdefghijklmnopqrstuvwxyz';
+        let array = [];
+        for (i = 0; i < demo.length; i++) {
+            if (LOWER.indexOf(demo[i]) != -1) {
+                array.push(demo[i].toUpperCase());
+            } else if (UPPER.indexOf(demo[i]) != -1) {
+                array.push(demo[i].toLowerCase());
+            } else array.push(demo[i]);
+        }
+        document.write(array.join(''));
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Từ điển</title>
+</head>
+
+<body>
+    <h1>TỪ ĐIỂN THÔNG DỤNG</h1>
+    <input type="text" name="input" id="input" oninput="dich()" />
+    <!-- <input type="button" name="translate" value='Translate' id="translate" onclick="dich();" /> -->
+    <p id='result'></p>
+</body>
+<script>
+    function dich() {
+        let voca = document.getElementById('input').value;
+        let english = ['time', 'year', 'people', 'way', 'day', 'man', 'thing', 'woman', 'life', 'child', 'world', 'school',
+            'state', 'family', 'student', 'group', 'country', 'problem', 'hand', 'part'];
+        let vietnamese = ['thời gian', 'năm', 'con người', 'con đường', 'ngày', 'đàn ông', 'sự vật', 'phụ nữ', 'cuộc sống',
+            'con cái', 'thế giới', 'trường học', 'trạng thái', 'gia đình', 'học sinh', 'nhóm', 'đất nước', 'vấn đề', 'bàn tay', 'bộ phận'];
+        voca = voca.toLowerCase();
+        for (let i = 0; i < english.length; i++) {
+            if (english[i] == voca) {
+                document.getElementById('result').innerHTML = vietnamese[i];
+                break;
+            } else document.getElementById('result').innerHTML = 'Không tìm thấy';
+        }
+    }
+</script>
+
+</html>

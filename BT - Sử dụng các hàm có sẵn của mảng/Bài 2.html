@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = prompt('Nhập 1 số nguyên dương bất kỳ: ');
+        let array = [num[0]];
+        let i = 1;
+        while (i < num.length) {
+            sodu1 = num[i - 1] % 2;
+            sodu2 = num[i] % 2;
+            if (sodu1 === 0 && sodu2 === 0) {
+                array.push('-');
+                array.push(num[i]);
+            } else array.push(num[i]);
+            i++;
+        }
+
+        document.write(array.join(''));
+
+
+
+    </script>
+</body>
+
+</html>
