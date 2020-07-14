@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bài 6</title>
+    <title>Bài 8</title>
 </head>
 
 <body>
@@ -15,14 +15,17 @@
             let a = +prompt('Nhập số nguyên thứ ' + n + ' bất kỳ: ');
             mang.push(a);
         }
-        let songuyenV = +prompt('Nhập vào số nguyên V: ');
-        for (i = 0; i < mang.length; i++) {
-            if (songuyenV == mang[i]) {
-                let b = 1;
-                break;
+        for (i = 0; i < 10; i++) {
+            for (j = 0; j < 9; j++) {
+                if (mang[j] < mang[j + 1]) {
+                    a = mang[j];
+                    mang[j] = mang[j + 1];
+                    mang[j + 1] = a;
+                }
             }
         }
-        b = 1 ? alert('V is in the array') : alert('V is not in the array');
+        document.write(mang);
+
     </script>
 </body>
 

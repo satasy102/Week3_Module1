@@ -9,17 +9,19 @@
 
 <body>
     <script>
-        let mang = [];
+        let nguyenam = ['u', 'e', 'o', 'a', 'i'];
         let count = 0;
-        let n = +prompt('Nhập số phần tử trong mảng: ');
-        for (let i = 0; i < n; i++) {
-            let a = +prompt('Nhập 1 số nguyên bất kỳ: ');
-            mang.push(a);
-            if (a < 0) {
-                count++;
+        let chuoi = prompt('Nhập chuỗi: ');
+        chuoi.toLowerCase;
+        for (let i = 0; i < chuoi.length; i++) {
+            for (j = 0; j < nguyenam.length; j++) {
+                if (chuoi[i] == nguyenam[j]) {
+                    count++;
+                }
             }
+
         } alert('Mảng bạn nhập có ' + count + ' số nguyên âm');
-        console.log(mang);
+
     </script>
 </body>
 

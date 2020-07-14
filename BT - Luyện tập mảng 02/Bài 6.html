@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 6</title>
+</head>
+
+<body>
+    <script>
+        let mang = [];
+        let kichthuocmang = +prompt('Nhập kích thước mảng:');
+        for (let i = 0; i < kichthuocmang; i++) {
+            let n = i + 1;
+            let a = prompt('Nhập ký tự thứ ' + n + ' bất kỳ: ');
+            console.log(a.length);
+            if (a.length == 1) {
+                mang.push(a);
+            } else i--;
+        }
+        document.write('Mảng lúc đầu: ' + mang + '<br/>');
+
+        for (let i = 0; i < kichthuocmang; i++) {
+            if (mang[i] == '-') {
+                mang[i] = '_';
+            }
+        }
+        document.write('Mảng sau khi đổi: ' + mang);
+    </script>
+</body>
+
+</html>

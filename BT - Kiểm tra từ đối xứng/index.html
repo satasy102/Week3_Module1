@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+
+<body>
+    <script>
+        /* Không đệ quy
+        function kiemtra(a) {
+            let result = false;
+            for (let i = 0; i < a.length; i++) {
+                if (a[i] == a[a.length - 1 - i]) {
+                    result = true;
+                } else {
+                    result = false;
+                    break;
+                }
+            } return result;
+        }
+        let input = prompt('Nhập: ');
+        alert(kiemtra(input));*/
+
+        //Đệ quy
+
+        function kiemtra(a, i, result) {
+            console.log(a[a.length - 1 - i]);
+            if (a[i] == a[a.length - 1 - i]) {
+                result = true;
+            } else {
+                result = false;
+            }
+            i++;
+            return result;
+            kiemtra(a, i, result);
+        }
+        let input = prompt('Nhập: ');
+        let i = 0;
+        let result = false;
+        alert(kiemtra(input, i, result));
+    </script>
+</body>
+
+</html>
