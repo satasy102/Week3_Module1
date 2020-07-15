@@ -20,7 +20,7 @@
         for (i = 0; i < mang.length; i++) {
             if (songuyenV == mang[i]) {
                 b = 1;
-                for (let j = i; j < mang.length - b; j++) {
+                for (let j = i; j < mang.length - 1; j++) {
                     let c = mang[j];
                     mang[j] = mang[j + 1];
                     mang[j + 1] = c;
@@ -29,7 +29,6 @@
         }
         for (i = 0; i < mang.length; i++) {
             if (songuyenV == mang[i]) mang[i] = 0;
-
         }
         b != 0 ? alert('V is in the array') : alert('V is not in the array');
         document.write(mang);

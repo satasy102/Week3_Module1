@@ -14,11 +14,12 @@
     <div id="result"></div>
 </body>
 <script>
-    let x = 0;
+    let i = 0;
     let mang = [];
-
     function themvaomang() {
-        mang[x] = document.getElementById('giatri').value;
+        mang[i] = document.getElementById('giatri').value;
+        alert("Đã thêm " + mang[i] + " vào vị trí " + i + " của mảng")
+        i++;
         document.getElementById('giatri').value = "";
     }
     function hienthimang() {
