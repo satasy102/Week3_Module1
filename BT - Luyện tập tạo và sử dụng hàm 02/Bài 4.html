@@ -10,10 +10,14 @@
 <body>
     <script>
         function test(a) {
-            console.log(typeof (a));
-            if (typeof (a) == "number") return true; return false;
+            while (a == "") {
+                alert('Không được để trống');
+                a = +prompt('Nhập:');
+            }
+            let check = Number.isNaN(a) == false;
+            return check;
         }
-        let input = prompt('Nhập: ');
+        let input = +prompt('Nhập: ');
         let result = test(input);
         alert(result);
     </script>
