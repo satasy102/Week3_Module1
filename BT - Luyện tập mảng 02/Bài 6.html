@@ -10,7 +10,11 @@
 <body>
     <script>
         let mang = [];
-        let kichthuocmang = +prompt('Nhập kích thước mảng:');
+        let kichthuocmang = parseInt(prompt('Nhập kích thước mảng:'));
+        while (!Number.isInteger(kichthuocmang)) {
+            alert('Không phải là số tự nhiên');
+            kichthuocmang = parseInt(prompt('Nhập kích thước mảng:'));
+        }
         for (let i = 0; i < kichthuocmang; i++) {
             let n = i + 1;
             let a = prompt('Nhập ký tự thứ ' + n + ' bất kỳ: ');

@@ -13,10 +13,18 @@
         let b = 0;
         for (let i = 0; i < 10; i++) {
             let n = i + 1;
-            let a = +prompt('Nhập số nguyên thứ ' + n + ' bất kỳ: ');
+            a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + n + ': '));
+            while (!Number.isInteger(a)) {
+                alert('Không phải số tự nhiên');
+                a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + n + ': '));
+            }
             mang.push(a);
         }
-        let songuyenV = +prompt('Nhập vào số nguyên V: ');
+        let songuyenV = parseInt(prompt('Nhập vào số nguyên V: '));
+        while (!Number.isInteger(songuyenV)) {
+            alert('Không phải số tự nhiên');
+            songuyenV = parseInt(prompt('Nhập vào số nguyên V: '));
+        }
         for (i = 0; i < mang.length; i++) {
             if (songuyenV == mang[i]) {
                 b = 1;
@@ -32,6 +40,7 @@
         }
         b != 0 ? alert('V is in the array') : alert('V is not in the array');
         document.write(mang);
+        document.write('Số nguyên V: ' + songuyenV);
 
     </script>
 </body>

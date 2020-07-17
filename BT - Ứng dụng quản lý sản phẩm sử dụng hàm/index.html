@@ -7,65 +7,76 @@
     <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
 </head>
 
-<body>
+<body onload="productName(product)">
     <h1> Add New Product</h1>
     <input id="add" type="text" placeholder="New Product" name="txt"> <input type="button" value="Add"
-        onclick="add(product);productName(product)">
+        onclick="them(product);productName(product)">
     <h1>Display All Product</h1>
     <input id="edit-text" type="text" placeholder="Edit Product"><input type="button" value="Update"
         onclick="capnhat(product);productName(product) ">
     <h2>Product Name</h2>
-    <input type="button" value="Display" onclick="productName(product)">
-
     <div id="display"></div>
-
-    <script>
-        var currentId = null;
-
-        function productName(product) {
-            let o = '<table>';
-            let n = 0;
-            for (i = 0; i < product.length; i++) {
-                n = i + 1;
-                o += `<tr> <td> ${n} </td>
-                <td> ${product[i]} </td>
-                <td> <input type="button"  value="Edit" onclick="sua(product,${i});;productName(product)"> </td>
-                <td> <input type="button"  value="Delete" onclick="xoa(product,${i});productName(product)"></td>
-                 </tr>`;
-            }
-            o += "</table>";
-
-            document.getElementById('display').innerHTML = o;
+</body>
+<script>
+    function productName(product) {
+        let o = '<table>';
+        let n = 0;
+        for (i = 0; i < product.length; i++) {
+            n = i + 1;
+            o += `<tr> <td> ${n} </td>
+            <td> ${product[i]} </td>
+            <td> <input type="button"  value="Edit" onclick="sua(product,${i});;productName(product)"> </td>
+            <td> <input type="button"  value="Delete" onclick="xoa(product,${i});productName(product)"></td>
+             </tr>`;
         }
-        let product = ['Samsung', 'Vivo', 'Realme', 'Iphone', 'Nokia', 'Oppo', 'Xiaomi', 'LG'];
-        let x = product.length;
-        function add(product) {
-            product[x] = document.getElementById('add').value;
+        o += "</table>";
+        document.getElementById('display').innerHTML = o;
+    }
+    let product = ['Samsung', 'Vivo', 'Realme', 'Iphone', 'Nokia', 'Oppo', 'Xiaomi', 'LG'];
+    let x = product.length;
+    function them(product) {
+        let newproduct = document.getElementById('add').value;
+        let check = false;
+        for (let i = 0; i < newproduct.length; i++) {
+            if (newproduct[i] != ' ') {
+                check = true;
+                break;
+            }
+        }
+        if (!check) {
+            alert("Không được nhập chuỗi dấu space");
+            document.getElementById('add').value = '';
+            return;
+        }
+        if (newproduct == '' || newproduct == ' ') {
+            alert('Xin nhập tên thiết bị mới!');
+        } else {
+            product[x] = newproduct;
             alert(`Đã thêm ${product[x]} vào danh sách`);
             x++;
             document.getElementById('add').value = '';
         }
-        function xoa(product, a) {
-            if (confirm('Bạn có thực sự muốn xóa ' + product[a] + " ?")) {
-                for (let j = a; j < product.length - 1; j++) {
-                    let c = product[j];
-                    product[j] = product[j + 1];
-                    product[j + 1] = c;
-                }
-                product.pop();
+    }
+    function xoa(product, a) {
+        if (confirm('Bạn có thực sự muốn xóa ' + product[a] + " ?")) {
+            for (let j = a; j < product.length - 1; j++) {
+                let c = product[j];
+                product[j] = product[j + 1];
+                product[j + 1] = c;
             }
+            product.pop();
         }
-
-        function sua(product, b) {
-            document.getElementById('edit-text').value = product[b];
-            currentId = b;
-            product[b] = document.getElementById('edit-text').value;
-        }
-        function capnhat(product) {
-            product[currentId] = document.getElementById('edit-text').value;
-            console.log(product)
-        }
-    </script>
-</body>
+    }
+    let currentId = null;
+    function sua(product, b) {
+        document.getElementById('edit-text').value = product[b];
+        currentId = b;
+        product[b] = document.getElementById('edit-text').value;
+    }
+    function capnhat(product) {
+        product[currentId] = document.getElementById('edit-text').value;
+        console.log(product)
+    }
+</script>
 
 </html>

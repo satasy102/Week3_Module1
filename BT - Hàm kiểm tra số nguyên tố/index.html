@@ -9,24 +9,29 @@
 
 <body>
     <script>
-        function songuyento(num) {
-            let b = 0;
-            for (i = 2; i <= num; i++) {
-                for (let j = 2; j < i; j++) {
-                    let sodu = i % j;
-                    if (sodu == 0) {
-                        b = 1;
-                        break;
-                    }
+        function songuyento(a) {
+            let b = true;
+            for (let i = 2; i < a; i++) {
+                let sodu = a % i;
+                if (sodu == 0) {
+                    b = false;
+                    break;
                 }
-                if (b != 1) {
-                    document.write(i + ' ');
-                }
-                b = 0;
+            }
+            return b;
+        }
+        let num = +prompt("Nhập: ");
+        if (!Number.isInteger(num)) {
+            alert('Không phải số');
+        } else {
+            let result = songuyento(num);
+            (result == true) ? alert(`Số ${num} là số nguyên tố`) : alert(`Số ${num} không phải là số nguyên tố`);
+            for (let i = 2; i <= 10000; i++) {
+                (songuyento(i)) ? document.write(i + " ") : '';
             }
         }
-        let num = parseInt(prompt("Nhập: "));
-        songuyento(num);
+
+
 
 
 

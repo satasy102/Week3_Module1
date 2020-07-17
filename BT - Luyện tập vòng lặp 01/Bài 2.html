@@ -12,6 +12,10 @@
     <script>
         function nhapnhietdo() {
             let nhietdo = +prompt('nhập nhiệt độ: ');
+            while (Number.isNaN(nhietdo)) {
+                alert('Không phải số.');
+                nhietdo = +prompt('nhập nhiệt độ: ');
+            }
             if (nhietdo > 100) {
                 alert('Xin hãy giảm nhiệt độ');
                 nhapnhietdo();

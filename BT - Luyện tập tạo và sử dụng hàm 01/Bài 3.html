@@ -10,9 +10,21 @@
 <body>
     <script>
         function sosanh(a, b) {
-            if (a > b) alert('a lớn hơn b'); return (a + b);
+            if (a > b) {
+                alert(`${a} lớn hơn ${b}`);
+            } else return a + b;
         }
-        let result = sosanh(1, 2);
+        let x = +prompt('Nhập x:');
+        while (Number.isNaN(x)) {
+            alert('Không phải số');
+            x = +(prompt('Nhập x:'));
+        }
+        let y = +(prompt('Nhập y:'));
+        while (Number.isNaN(y)) {
+            alert('Không phải số');
+            y = +(prompt('Nhập y:'));
+        }
+        let result = sosanh(x, y);
         document.write(result);
     </script>
 </body>

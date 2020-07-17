@@ -12,9 +12,17 @@
 </body>
 <script>
     let num = parseInt(prompt('Nhập 1 số tự nhiên: '));
-    let sl = parseInt(prompt('Nhập số lượng cần in ra: '));
     let s = 0;
     let count = 0;
+    while (!Number.isInteger(num)) {
+        alert('Không phải số tự nhiên');
+        num = parseInt(prompt('Nhập 1 số tự nhiên: '));
+    }
+    let sl = parseInt(prompt('Nhập số lượng cần in ra: '));
+    while (!Number.isInteger(sl)) {
+        alert('Không phải số tự nhiên');
+        sl = parseInt(prompt('Nhập số lượng cần in ra: '));
+    }
     for (let j = 2; j <= num; j++) {
         for (let i = 2; i < j; i++) {
             let sodu = j % i;
@@ -28,6 +36,8 @@
         }
         s = 0;
     }
+
+
 </script>
 
 </html>

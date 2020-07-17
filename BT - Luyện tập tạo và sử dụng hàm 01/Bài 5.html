@@ -9,20 +9,22 @@
 
 <body onload="demo()">
     <script>
-        function demo(a) {
-            let ngoisao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
-            let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
-            let i = 0;
-            for (i = 0; i < ngoisao.length; i++) {
+        let ngoisao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+        let chomsao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+        function demo(a, ngoisao) {
+            let x = -1;
+            for (let i = 0; i < ngoisao.length; i++) {
                 if (a == ngoisao[i]) {
-                    return chomsao[i];
+                    x = i;
                     break;
-                } else return -1;
+                }
             }
+            return x;
         }
         let input = prompt('Nhập tên ngôi sao: ')
-        let result = demo(input);
-        alert(result);
+        let result = demo(input, ngoisao);
+        if (result != -1) alert(chomsao[result]);
+        else alert('Không có chòm sao nào ứng với ngôi sao bạn vừa nhập');
     </script>
 </body>
 

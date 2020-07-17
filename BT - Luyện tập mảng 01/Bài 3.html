@@ -11,9 +11,18 @@
     <script>
         let mang = [];
         let tong = max = tbc = 0;
-        let n = +prompt('Nhập số phần tử có trong mảng: ');
+        let n = parseInt(prompt('Nhập số phần tử có trong mảng: '));
+        while (!Number.isInteger(n)) {
+            alert('Không phải số tự nhiên');
+            n = parseInt(prompt('Nhập số phần tử có trong mảng: '));
+        }
         for (let i = 0; i < n; i++) {
-            let a = +prompt('Nhập 1 số nguyên bất kỳ: ');
+            let b = i + 1;
+            let a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + b + ': '));
+            while (!Number.isInteger(a)) {
+                alert('Không phải số tự nhiên');
+                a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + b + ': '));
+            }
             mang.push(a);
             if (mang[i] > max) {
                 max = mang[i];
@@ -21,6 +30,7 @@
             tong += mang[i];
         }
         tbc = tong / n;
+        document.write(mang + "<br/>");
         document.write(`Số lớn nhất trong mảng là ${max} và giá trị trung bình các số trong mảng là ${tbc}`);
     </script>
 </body>

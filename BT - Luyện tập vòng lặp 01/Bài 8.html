@@ -9,13 +9,24 @@
 
 <body>
     <script>
-
         let minA = +prompt('Nhập khoảng dự doán. Số nhỏ nhất: ');
+        while (Number.isNaN(minA)) {
+            alert('Không phải số.');
+            minA = +prompt('Nhập khoảng dự doán. Số nhỏ nhất: ');
+        }
         let maxA = +prompt('Nhập khoảng dự doán. Số lớn nhất: ');
+        while (Number.isNaN(maxA)) {
+            alert('Không phải số.');
+            maxA = +prompt('Nhập khoảng dự doán. Số lớn nhất: ');
+        }
         let random = 0;
         random = parseInt(Math.random() * (maxA - minA) + minA);
         function doan(minA, maxA, random) {
             let userdoan = +prompt('Mời bạn đoán: ');
+            while (Number.isNaN(userdoan)) {
+                alert('Không phải số.');
+                userdoan = +prompt('Mời bạn đoán: ');
+            }
             if (random == userdoan) {
                 alert('Chúc mừng bạn đã đoán trúng');
             } else if (random > userdoan) {

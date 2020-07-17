@@ -11,13 +11,22 @@
     <script>
         let mang = [];
         let i = x = 0;
-        let a = +prompt('Nhập số nguyên bất kỳ');
+        let a = parseInt(prompt('Nhập 1 số nguyên bất kỳ cho phần tử thứ 1:'));
+        while (!Number.isInteger(a)) {
+            alert('Không phải số tự nhiên');
+            a = parseInt(prompt('Nhập 1 số nguyên bất kỳ cho phần tử thứ 1: '));
+        }
         mang.push(a);
         let b = 0;
         let max = mang[0];
         for (i = 1; i < 10; i++) {
+            let n = i + 1;
             b = 0;
-            a = +prompt('Nhập số nguyên bất kỳ: ');
+            a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + n + ': '));
+            while (!Number.isInteger(a)) {
+                alert('Không phải số tự nhiên');
+                a = parseInt(prompt('Nhập 1 số nguyên bất kỳ vào phần tử thứ ' + n + ': '));
+            }
             for (j = 0; j < mang.length; j++) {
                 if (a === mang[j]) {
                     b = 1;
@@ -34,7 +43,7 @@
             }
         }
         alert('Số lớn nhất trong mảng là: ' + max + ' ở vị trí ' + x);
-        console.log(mang);
+        document.write(mang);
     </script>
 </body>
 

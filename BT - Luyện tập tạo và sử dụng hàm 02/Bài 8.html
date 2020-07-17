@@ -13,13 +13,13 @@
             let a = x = 0;
             let z = arr.length - 1;
             while (a < z) {
-                x = mang[a];
-                mang[a] = mang[z];
-                mang[z] = x;
+                x = arr[a];
+                arr[a] = arr[z];
+                arr[z] = x;
                 a++;
                 z--;
             }
-            document.write(mang);
+            document.write(arr);
         }
         let mang = [-1, 22, 3, 40, 5, -6, 1, 11, 15];
         let result = daonguocmang(mang);
