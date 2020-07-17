@@ -12,10 +12,10 @@
         function songuyenduong(a) {
             if (a > 0) return true; return false;
         }
-        let z = parseInt(prompt('Nhập số nguyên: '));
-        while (Number.isInteger(z)) {
+        let z = +prompt('Nhập số nguyên: ');
+        while (!Number.isInteger(z) || Number.isInteger(z) <= 0) {
             alert('Không phải số tự nhiên');
-            z = parseInt(prompt('Nhập số nguyên: '));
+            z = +prompt('Nhập số nguyên: ');
         }
         let result = songuyenduong(z);
         alert(result);

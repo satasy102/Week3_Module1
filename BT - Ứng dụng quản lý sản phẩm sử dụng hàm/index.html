@@ -44,12 +44,9 @@
             }
         }
         if (!check) {
-            alert("Không được nhập chuỗi dấu space");
+            alert("Xin mời nhập tên thiết bị mới!");
             document.getElementById('add').value = '';
             return;
-        }
-        if (newproduct == '' || newproduct == ' ') {
-            alert('Xin nhập tên thiết bị mới!');
         } else {
             product[x] = newproduct;
             alert(`Đã thêm ${product[x]} vào danh sách`);

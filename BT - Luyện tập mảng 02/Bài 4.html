@@ -13,13 +13,13 @@
         let count = 0;
         let isSpace = false;
         for (let i = 0; i < chuoi.length; i++) {
-            if (i == 0 && chuoi[i] != ' ' && chuoi[i] != '\t') {
+            if (i == 0 && chuoi[0] != ' ') {
                 count++;
             }
-            if (chuoi[i] == ' ' || chuoi[i] == '\t') {
+            if (chuoi[i] == ' ') {
                 isSpace = true;
             }
-            else if (isSpace == true) {
+            else if (isSpace) {
                 count++;
                 isSpace = false;
             }

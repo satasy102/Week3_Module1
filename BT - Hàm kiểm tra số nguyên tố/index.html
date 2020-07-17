@@ -20,9 +20,9 @@
             }
             return b;
         }
-        let num = +prompt("Nhập: ");
+        let num = parseInt(prompt("Nhập: "));
         if (!Number.isInteger(num)) {
-            alert('Không phải số');
+            alert('Không phải số tự nhiên');
         } else {
             let result = songuyento(num);
             (result == true) ? alert(`Số ${num} là số nguyên tố`) : alert(`Số ${num} không phải là số nguyên tố`);

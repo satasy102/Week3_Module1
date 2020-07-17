@@ -7,8 +7,6 @@
     <title>Tic tac toe</title>
 </head>
 
-
-
 <body>
 
     <h3>Caro Game Simple</h3>
@@ -35,7 +33,15 @@
 
     function danhdauX() {
         let toadoX = parseInt(prompt("X: "));
+        while (!Number.isInteger(toadoX)) {
+            alert('Không phải số tự nhiên.');
+            toadoX = parseInt(prompt("X: "));
+        }
         let toadoY = parseInt(prompt("Y: "));
+        while (!Number.isInteger(toadoY)) {
+            alert('Không phải số tự nhiên.');
+            toadoX = parseInt(prompt("Y: "));
+        }
         oco = "";
         banco[toadoX][toadoY] = "x";
         for (let i = 0; i < 3; i++) {
@@ -55,7 +61,15 @@
 
     function danhdauO() {
         let toadoX = parseInt(prompt("X: "));
+        while (!Number.isInteger(toadoX)) {
+            alert('Không phải số tự nhiên.');
+            toadoX = parseInt(prompt("X: "));
+        }
         let toadoY = parseInt(prompt("Y: "));
+        while (!Number.isInteger(toadoY)) {
+            alert('Không phải số tự nhiên.');
+            toadoX = parseInt(prompt("Y: "));
+        }
         oco = "";
         banco[toadoX][toadoY] = "o";
         for (let i = 0; i < 3; i++) {
@@ -72,8 +86,6 @@
             setTimeout(function () { alert('O đã chiến thắng') }, 300);
         }
     }
-
-
 </script>
 
 </html>

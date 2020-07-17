@@ -16,12 +16,9 @@
     for (i = 1; i <= 9; i++) {
         o = o + "<tr>";
         for (j = 2; j <= 9; j++) {
-
             let s = j * i;
             o = o + `<td> ${j}x${i}=${s} </td>`;
-
         } o = o + '</tr>';
-
     }
     o = o + '</table>';
     document.write(o);
