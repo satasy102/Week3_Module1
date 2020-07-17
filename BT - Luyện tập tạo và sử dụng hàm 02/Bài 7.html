@@ -18,7 +18,15 @@
 
         }
         let x = +prompt('Nhập số thứ 1: ');
+        while (Number.isNaN(x)) {
+            alert('Không phải là số.');
+            x = +prompt('Nhập số thứ 1: ');
+        }
         let y = +prompt('Nhập số thứ 2: ');
+        while (Number.isNaN(y)) {
+            alert('Không phải là số.');
+            y = +prompt('Nhập số thứ 2: ');
+        }
         swap(x, y);
 
     </script>

@@ -13,6 +13,10 @@
             if (a > 0) return true; return false;
         }
         let z = parseInt(prompt('Nhập số nguyên: '));
+        while (Number.isInteger(z)) {
+            alert('Không phải số tự nhiên');
+            z = parseInt(prompt('Nhập số nguyên: '));
+        }
         let result = songuyenduong(z);
         alert(result);
     </script>

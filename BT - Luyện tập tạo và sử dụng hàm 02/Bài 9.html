@@ -9,22 +9,19 @@
 
 <body>
     <script>
-
         function test(arr, text) {
             let count = 0;
             for (let i = 0; i < arr.length; i++) {
                 if (text == arr[i]) {
                     count++;
                 };
-                return count;
             }
+            return count;
         }
-        let chuoikytu = prompt('Nhập 1 dãy ký tự bất kỳ');
-        let mang = chuoikytu.toString();
+        let mang = prompt('Nhập 1 chuỗi bất kỳ');
         let kytu = prompt('Nhập 1 ký tự: ');
         let result = test(mang, kytu);
         alert(`Ký tự ${kytu} được xuất hiện ${result} lần trong dãy vừa nhập trước đó`);
-
     </script>
 </body>
 
