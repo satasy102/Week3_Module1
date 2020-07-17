@@ -11,17 +11,19 @@
     <script>
         function chuvihinhtron(r) {
             return 3.14 * r * 2;
-
         }
         function dientichhinhtron(r) {
             return 3.14 * r * r;
-
         }
         let a = +prompt('Nhập chiều dài bán kính: ');
+        while (Number.isNaN(a)) {
+            alert('Không phải số.');
+            a = +prompt('Nhập chiều dài bán kính: ');
+        }
         let chuvi = chuvihinhtron(a);
         let dientich = dientichhinhtron(a);
-        alert("Chu vi là: " + chuvi);
-        alert('Diện tích là: ' + dientich);
+        alert("Chu vi hình tròn là: " + chuvi);
+        alert('Diện tích hình tròn là: ' + dientich);
     </script>
 </body>
 

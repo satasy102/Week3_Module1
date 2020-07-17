@@ -20,12 +20,16 @@
         */
         // Đệ quy
         function giaithua(a) {
-            if (a == 2) return a;
+            if (a == 1) return a;
             return a * giaithua(a - 1);
         }
-        let num = +prompt("nhập số tính giai thừa");
-        let result = giaithua(num);
-        alert(result);
+        let num = parseInt(prompt("nhập số tính giai thừa"));
+        while (!Number.isInteger(num)) {
+            alert('Không phải số');
+            num = parseInt(prompt("nhập số tính giai thừa"));
+        }
+        (num == 0) ? result = 1 : result = giaithua(num);
+        alert(num + '! bằng: ' + result);
 
     </script>
 </body>
